@@ -1,34 +1,99 @@
 .page {
-    background-color: var(--light);
     box-sizing: border-box;
-    &__heading {
-        border: 1px solid var(--coral);    
-        margin: 2%;
-        padding: 2%;
-        font-size: 2.25rem;
-    }
-    &__sub-heading {
-        border: 1px solid var(--coral);    
-        margin: 2%;
-        padding: 2%;
-        font-size: 1.75rem;
-    }
-    &__text {
-        border: 1px solid var(--coral);    
-        margin: 2%;
-        padding: 2%;
-        font-size: 1rem;
-    }
-    &__container {
-        border: 1px solid var(--coral);
+    margin: 0;
+    padding: 0;
+
+    &__intro {
         display: flex;
         justify-content: space-evenly;
-        margin: 2%;
-        padding: 2%;
-        display: flex;
+        margin: 0;
+        padding: 0;
         flex-flow: wrap;
         align-items: stretch;
         flex-direction: row;
         flex-wrap: wrap;
+    }
+
+    &__heading {   
+        margin: 0;
+        padding: 2%;
+        font-size: 8rem;
+        text-align: left;
+        flex-basis: 100%;
+        box-sizing: border-box;
+
+        @include respond-medium {
+            text-align: center;
+            flex-basis: 70%;
+        }
+        
+        &--style {
+            background-color: var(--yellow);
+            color: var(--red-purple);
+            font-family: "BenchNine-Bold";
+            @include on-dark-mode {
+                background-color: var(--red-purple);
+                color: var(--yellow-green);
+            }
+        }
+    }
+
+    &__sub-heading { 
+        margin: 0;
+        padding: 3%;
+        font-size: 4rem;
+        text-align: left;
+        flex-basis: 100%;
+        box-sizing: border-box;
+
+        @include respond-medium {
+            text-align: center;
+            flex-basis: 30%;
+        }
+
+        &--style {
+            color: var(--purple);
+            background-color: var(--yellow-green);
+            font-family: "BenchNine-Regular";
+            @include on-dark-mode {
+            background-color: var(--purple);
+            color: var(--yellow-green);
+            }
+        }
+    }
+
+    &__text {
+        border: 1px solid var(--orange);    
+        margin: 0;
+        padding: 2%;
+        font-size: 2rem;
+        display: none;
+        flex-basis: 100%;
+        box-sizing: border-box;
+
+        &--style {
+            color: var(--yellow);
+            background-color: var(--green-blue);
+            font-family: "BenchNine-Regular";
+            @include on-dark-mode {
+                background-color: var(--dark);
+                color: var(--orange);
+                }
+        }
+
+        @include respond-small {
+            display: block;
+        }
+    }
+    &__container {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0;
+        padding: 0;
+        flex-flow: wrap;
+        align-items: stretch;
+        flex-direction: row;
+        flex-wrap: wrap;
+        box-sizing: border-box;
     }
 }
